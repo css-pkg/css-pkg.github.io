@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/top-bar.css/top-bar.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <style>
+    .page {
+      margin: 3rem auto;
+      max-width: 42rem;
+      padding: 0 1rem;
+    }
+    .pkgs {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: stretch;
+      justify-content: center;
+    }
+    .pkg {
+      margin: 2%;
+      border: 1px solid lightgray;
+      padding: 2em;
+      border-radius: 4px;
+      width: 42%;
+      display: inline-block;
+    }
+    .pkg > :first-child {
+      margin-top: 0;
+    }
+    .pkg h3 {
+      padding-bottom: .25em;
+      border-bottom: 1px solid lightgray;
+    }
+    .pkg > :last-child {
+      margin-bottom: 0;
+    }
+    @media (max-width: 700px) {
+      .pkg {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="top-bar">
+    <a href="/" class="top-bar-title">📦 css-pkg</a>
+
+    <div class="top-bar-right">
+      <a class="top-bar-link" href="https://github.com/css-pkg/">
+        <i class="fa fa-fw fa-github"></i>
+      </a>
+    </div>
+  </nav>
+  <div class="page">
+    <div align="center">
+      <h1>
+        📦<br>
+        css-pkg
+      </h1>
+      <p>CSS packages, ready for delivery!</p>
+    </div>
+
+    <div class="pkgs">
+      <div class="pkg">
+        <h3><a href="/style.css/">🔰 style.css</a></h3>
+        <p>A classless stylesheet for HTML documents.</p>
+      </div>
+      <div class="pkg">
+        <h3><a href="/top-bar.css/">🎩 top-bar.css</a></h3>
+        <p>A top bar navigation pattern.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
