@@ -9,35 +9,63 @@
   <link rel="stylesheet" href="https://unpkg.com/top-bar.css/top-bar.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <style>
+    html { background: #fafafa; }
+    .header {
+      background: #141E30;
+      background: linear-gradient(to bottom, #243B55, #141E30);
+      color: #fff;
+      text-align: center;
+      padding-bottom: 3em;
+    }
+    .top-bar-title { color: #fff }
     .page {
-      margin: 3rem auto;
-      max-width: 42rem;
+      margin: 3em auto;
+      max-width: 56rem;
       padding: 0 1rem;
     }
     .pkgs {
       display: flex;
       flex-wrap: wrap;
       align-content: stretch;
-      justify-content: center;
+      /* justify-content: center; */
     }
     .pkg {
+      background: #fff;
       margin: 2%;
       border: 1px solid lightgray;
-      padding: 2em;
+      padding: 1em;
       border-radius: 4px;
-      width: 42%;
+      width: 46%;
       display: inline-block;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
     }
     .pkg > :first-child {
       margin-top: 0;
     }
-    .pkg h3 {
-      padding-bottom: .25em;
-      border-bottom: 1px solid lightgray;
-    }
     .pkg > :last-child {
       margin-bottom: 0;
     }
+    .pkg > pre {
+      font-size: 75%;
+      padding: 0.75em;
+      border: 1px solid lightgray;
+    }
+    .footer {
+      background: #141E30;
+      background: linear-gradient(to top, #243B55, #141E30);
+      text-align: center;
+      padding: 3em 1em;
+    }
+    .footer p {
+      color: #fff;
+      font-size: 80%;
+      margin: 0;
+    }
+    .footer p:last-child {
+      padding-top: 3em;
+    }
+    .footer a { color: #9cf }
+    .footer .fa { font-size: 32px }
     @media (max-width: 700px) {
       .pkg {
         width: 90%;
@@ -46,34 +74,81 @@
   </style>
 </head>
 <body>
-  <nav class="top-bar">
-    <a href="/" class="top-bar-title">📦 css-pkg</a>
+  <div class="header">
+    <nav class="top-bar">
+      <a href="/" class="top-bar-title">📦 css-pkg</a>
 
-    <div class="top-bar-right">
-      <a class="top-bar-link" href="https://github.com/css-pkg/">
-        <i class="fa fa-fw fa-github"></i>
-      </a>
-    </div>
-  </nav>
+      <div class="top-bar-right">
+        <a class="top-bar-link" href="https://github.com/css-pkg/">
+          <i class="fa fa-fw fa-github"></i>
+        </a>
+      </div>
+    </nav>
+    <h1>
+      📦<br>
+      css-pkg
+    </h1>
+    <p>CSS packages, ready for delivery!</p>
+  </div>
   <div class="page">
-    <div align="center">
-      <h1>
-        📦<br>
-        css-pkg
-      </h1>
-      <p>CSS packages, ready for delivery!</p>
-    </div>
-
     <div class="pkgs">
       <div class="pkg">
-        <h3><a href="/style.css/">🔰 style.css</a></h3>
+        <h3>
+          <a href="/style.css/">🔰 style.css</a>
+        </h3>
+        <pre><code>npm i style.css</code></pre>
         <p>A classless stylesheet for HTML documents.</p>
       </div>
       <div class="pkg">
-        <h3><a href="/top-bar.css/">🎩 top-bar.css</a></h3>
+        <h3>
+          <a href="/top-bar.css/">🎩 top-bar.css</a>
+        </h3>
+        <pre><code>npm i top-bar.css</code></pre>
         <p>A top bar navigation pattern.</p>
       </div>
+      <div class="pkg">
+        <h3>
+          <a href="https://big-cursors.netlify.com">🐁 big-cursors.css</a>
+        </h3>
+        <pre><code>npm i big-cursors.css</code></pre>
+        <p>Comically large cursors as a node packaged css module.</p>
+      </div>
+      <div class="pkg">
+        <h3>
+          <a href="https://fraktur.netlify.com">📦 fraktur.css</a>
+        </h3>
+        <pre><code>npm i fraktur.css</code></pre>
+        <p>Fraktur unicode as a node packaged webfont.</p>
+      </div>
+      <div class="pkg">
+        <h3>
+          <a href="https://chicago-css.netlify.com">📦 chicago.css</a>
+        </h3>
+        <pre><code>npm i chicago.css</code></pre>
+        <p>ChicagoFLF webfont as a node packaged module.</p>
+      </div>
+      <div class="pkg">
+        <h3>
+          <a href="https://go-fonts.netlify.com">📦 go-fonts.css</a>
+        </h3>
+        <pre><code>npm i go-fonts.css</code></pre>
+        <p>Golang fonts as a node packaged module.</p>
+      </div>
+      <div class="pkg">
+        <h3>
+          <a href="https://lunchtype-css.netlify.com">📦 lunchtype.css</a>
+        </h3>
+        <pre><code>npm i lunchtype.css</code></pre>
+        <p>Lunchtype fonts and css as a node packaged module.</p>
+      </div>
     </div>
+  </div>
+  <div class="footer">
+    <p>
+      <a href="https://github.com/css-pkg/"><i class="fa fa-fw fa-github"></i></a>
+      <a href="https://twitter.com/hypermodul_es"><i class="fa fa-fw fa-twitter"></i></a>
+    </p>
+    <p>made with 💻 by <a href="https://ungoldman.com">nate</a> & <a href="https://bret.io">bret</a> for <a href="https://hypermodul.es">hypermodul.es</a></p>
   </div>
 </body>
 </html>
