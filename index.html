@@ -17,7 +17,10 @@
       text-align: center;
       padding-bottom: 3em;
     }
-    .top-bar-title { color: #fff }
+    .top-bar-link, .top-bar-title { color: #fff }
+    .top-bar-link .fa,
+    .top-bar-title .fa { font-size: 125% }
+    .top-bar-link.current-page, .top-bar-link.current-page:hover, .top-bar-link:hover { color: #fff }
     .page {
       margin: 3em auto;
       max-width: 56rem;
@@ -68,7 +71,7 @@
     .footer .fa { font-size: 32px }
     @media (max-width: 700px) {
       .pkg {
-        width: 90%;
+        width: 96%;
       }
     }
   </style>
